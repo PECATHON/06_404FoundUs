@@ -186,11 +186,6 @@ function App() {
     setFlightResults([]);
   };
 
-  const handleSelectHotel = (hotel: HotelResult) => {
-    handleSendMessage(`I'd like to book ${hotel.name} in ${hotel.city} for $${hotel.price_per_night}/night.`);
-    setHotelResults([]);
-  };
-
   const handleBookFlight = (flight: FlightResult) => {
     setSelectedFlightForBooking(flight);
     setBookingModalOpen(true);
@@ -425,7 +420,6 @@ function App() {
           hotelResults={hotelResults}
           status={status}
           onSelectFlight={handleSelectFlight}
-          onSelectHotel={handleSelectHotel}
           onBookFlight={handleBookFlight}
           onBookHotel={handleBookHotel}
         />

@@ -13,12 +13,11 @@ interface MessageListProps {
   hotelResults: HotelResult[];
   status: string;
   onSelectFlight?: (flight: FlightResult) => void;
-  onSelectHotel?: (hotel: HotelResult) => void;
   onBookFlight?: (flight: FlightResult) => void;
   onBookHotel?: (hotel: HotelResult) => void;
 }
 
-export function MessageList({ messages, flightResults, hotelResults, status, onSelectFlight, onSelectHotel, onBookFlight, onBookHotel }: MessageListProps) {
+export function MessageList({ messages, flightResults, hotelResults, status, onSelectFlight, onBookFlight, onBookHotel }: MessageListProps) {
   const bottomRef = useRef<HTMLDivElement>(null);
   const { theme } = useTheme();
 
